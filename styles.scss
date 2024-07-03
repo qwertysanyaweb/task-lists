@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+$color1:#00a903;
+$red:#ff8b8b;
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    font-family:"Nunito Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100%;
+    font-size:18px;
+    line-height: 1.4;
+    padding:20px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin:0;
+}
+
+h1{
+    background: $color1;
+    display: inline-block;
+    vertical-align: top;
+    padding:8px 25px 5px 25px;
+    border-radius: 10px 10px 0 0;
+    color:#fff;
+}
+
+input{
+    outline:none;
+}
+
+.app {
+    max-width: 700px;
+    width:100%;
+    &-wrapper{
+        padding: 20px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+        border-radius:0 10px 0 10px;
+        border:2px solid $color1;
+    }
+    &-button{
+        display: flex;
+        justify-content: flex-end;
+        .siteButton{
+            border-radius: 0 0 0 10px;
+        }
+    }
+}
+
+.siteButton{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height:50px;
+    background: $color1;
+    border:0;
+    padding:10px 25px;
+    cursor: pointer;
+    color:#fff;
+    font-size:17px;
+    border-radius:8px;
+    &:hover{
+        background: darken($color1, 2%);
+    }
+    &.min{
+        min-height:40px; 
+        padding:0 15px;
+        min-width:40px;
+    }
+    &.red{
+        background: $red;
+    }
+}
+
+.list {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    &:first-child{
+        margin:0;
+    }
+    &-empty{
+        color:red;
+    }
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:20px;
+        input {
+            background: none;
+            flex-grow: 2;
+            border:1px solid #ccc;
+            font-size:20px;
+            height:45px;
+            padding:0 15px;
+            border-radius: 5px;
+        }
+        span{
+            font-size:20px;
+            font-weight: bold;
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        border-top: 1px solid #ddd;
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap:5px;
+            padding:5px 0;
+            border-bottom: 1px solid #ddd;
+            div{
+                flex-grow: 2;
+                display: flex;
+                align-items: center;
+                > input{
+                    height:40px;
+                    border:1px solid #ccc;
+                    border-radius: 5px 0 0 5px;
+                    width:100%;
+                    padding:0 10px;
+                    &:disabled{
+                        border-color:$color1;
+                    }
+                }
+            }
+            label{
+                cursor: pointer;
+                input{
+                    display: none;
+                    &:checked + span{
+                        background: $color1;
+                        svg{
+                            display: block;
+                        }
+                    }
+                }
+                span{
+                    width:40px;
+                    height:40px;
+                    background: #ccc;
+                    display: block;
+                    border-radius:0 5px 5px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    svg{
+                        fill:#fff;
+                    }
+                }
+            }
+        }
+    }
+}

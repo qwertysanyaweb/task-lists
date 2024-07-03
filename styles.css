@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  box-sizing: border-box; }
+
+html {
+  height: 100%; }
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100%;
+  font-size: 18px;
+  line-height: 1.4;
+  padding: 20px; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+h1 {
+  background: #00a903;
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px 25px 5px 25px;
+  border-radius: 10px 10px 0 0;
+  color: #fff; }
+
+input {
+  outline: none; }
+
+.app {
+  max-width: 700px;
+  width: 100%; }
+  .app-wrapper {
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    border-radius: 0 10px 0 10px;
+    border: 2px solid #00a903; }
+  .app-button {
+    display: flex;
+    justify-content: flex-end; }
+    .app-button .siteButton {
+      border-radius: 0 0 0 10px; }
+
+.siteButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 50px;
+  background: #00a903;
+  border: 0;
+  padding: 10px 25px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 8px; }
+  .siteButton:hover {
+    background: #009f03; }
+  .siteButton.min {
+    min-height: 40px;
+    padding: 0 15px;
+    min-width: 40px; }
+  .siteButton.red {
+    background: #ff8b8b; }
+
+.list {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px; }
+  .list:first-child {
+    margin: 0; }
+  .list-empty {
+    color: red; }
+  .list-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; }
+    .list-title input {
+      background: none;
+      flex-grow: 2;
+      border: 1px solid #ccc;
+      font-size: 20px;
+      height: 45px;
+      padding: 0 15px;
+      border-radius: 5px; }
+    .list-title span {
+      font-size: 20px;
+      font-weight: bold; }
+  .list ul {
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid #ddd; }
+    .list ul li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 0;
+      border-bottom: 1px solid #ddd; }
+      .list ul li div {
+        flex-grow: 2;
+        display: flex;
+        align-items: center; }
+        .list ul li div > input {
+          height: 40px;
+          border: 1px solid #ccc;
+          border-radius: 5px 0 0 5px;
+          width: 100%;
+          padding: 0 10px; }
+          .list ul li div > input:disabled {
+            border-color: #00a903; }
+      .list ul li label {
+        cursor: pointer; }
+        .list ul li label input {
+          display: none; }
+          .list ul li label input:checked + span {
+            background: #00a903; }
+            .list ul li label input:checked + span svg {
+              display: block; }
+        .list ul li label span {
+          width: 40px;
+          height: 40px;
+          background: #ccc;
+          display: block;
+          border-radius: 0 5px 5px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .list ul li label span svg {
+            fill: #fff; }
+
+/*# sourceMappingURL=styles.css.map */
